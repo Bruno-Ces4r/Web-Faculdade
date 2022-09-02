@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questão 2</title>
+    <style>
+      a {
+        text-decoration: none;
+        margin-right: 40px;
+        color: black;
+      }
+
+      a:first-child {
+        margin-left: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" onmouseover="azul()" class="azul">Azul</a>
+    <a href="#" onmouseover="red()" class="red">Vermelho</a>
+    <a href="#" onmouseover="roxo()" class="roxo">Roxo</a>
+    <a href="#" onmouseover="rosa()" class="rosa">Rosa</a>
+  </body>
+
+  <script type="text/javascript">
+    function azul() {
+      document.querySelector(".azul").style.backgroundColor = "blue";
+    }
+
+    function red() {
+      document.querySelector(".red").style.backgroundColor = "red";
+    }
+
+    function roxo() {
+      document.querySelector(".roxo").style.backgroundColor = "purple";
+    }
+
+    function rosa() {
+      document.querySelector(".rosa").style.backgroundColor = "pink";
+    }
+  </script>
+</html>

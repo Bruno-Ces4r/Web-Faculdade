@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questão 3</title>
+    <style>
+      .selecionar {
+        width: 100px;
+        height: 20px;
+        margin-left: 25px;
+      }
+      .escolha {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-left: 50px;
+      }
+    </style>
+  </head>
+  <body style="background-color: black; color: white">
+    <div class="escolha">
+      <h1>Escolha uma Cor para Mudar o Fundo:</h1>
+      <select name="select" class="selecionar" onchange="update()">
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="black" selected>Black</option>
+        <option value="purple">Purple</option>
+      </select>
+    </div>
+
+    <script type="text/javascript">
+      function cordeFundo(cor) {
+        document.body.style.backgroundColor = cor;
+      }
+
+      function update() {
+        let selecionado = document.querySelector(".selecionar").value;
+        console.log(selecionado);
+        cordeFundo(selecionado);
+      }
+    </script>
+  </body>
+</html>

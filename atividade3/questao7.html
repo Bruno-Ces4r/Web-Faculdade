@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questão 7</title>
+    <style>
+      div {
+        margin: 20px;
+      }
+
+      .submits {
+        max-width: 230px;
+        display: flex;
+        justify-content: end;
+      }
+
+      button {
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="name1">Nome 1:</label>
+        <input type="text" class="name1" value="" />
+      </div>
+      <div>
+        <label for="name2">Nome 2:</label>
+        <input type="text" class="name2" value="" />
+      </div>
+      <div>
+        <label for="name3">Nome 3:</label>
+        <input type="text" class="name3" value="" />
+      </div>
+      <div>
+        <label for="name4">Nome 4:</label>
+        <input type="text" class="name4" value="" />
+      </div>
+      <div>
+        <label for="name5">Nome 5:</label>
+        <input type="text" class="name5" value="" />
+      </div>
+      <div class="submits">
+        <button type="button" onclick="reverter()">Submit</button>
+      </div>
+    </form>
+
+    <script type="text/javascript">
+      function reverter() {
+        const nome1 = document.querySelector(".name1").value;
+        const nome2 = document.querySelector(".name2").value;
+        const nome3 = document.querySelector(".name3").value;
+        const nome4 = document.querySelector(".name4").value;
+        const nome5 = document.querySelector(".name5").value;
+
+        const input1 = document.querySelector(".name1");
+        const input2 = document.querySelector(".name2");
+        const input3 = document.querySelector(".name3");
+        const input4 = document.querySelector(".name4");
+        const input5 = document.querySelector(".name5");
+
+        let nomes = [nome1, nome2, nome3, nome4, nome5];
+        let inputs = [input1, input2, input3, input4, input5];
+        let reverte = nomes.reverse();
+        for (let i = 0; i < reverte.length; i++) {
+          inputs[i].value = reverte[i];
+        }
+      }
+    </script>
+  </body>
+</html>

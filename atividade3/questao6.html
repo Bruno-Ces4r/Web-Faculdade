@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questão 6</title>
+    <style>
+      div {
+        margin: 15px 0px 10px 0px;
+      }
+
+      .formulario {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="formulario">
+      <div>
+        <input
+          type="text"
+          name="palindromo"
+          id="palindromo"
+          placeholder="Palavra"
+          required
+        />
+      </div>
+      <div>
+        <p class="resposta"></p>
+      </div>
+      <button type="submit">verificar Palindromo</button>
+    </form>
+
+    <script type="text/javascript">
+      const form = document.querySelector(".formulario");
+      form.addEventListener("submit", verificaPalindromo);
+
+      function verificaPalindromo(e) {
+        e.preventDefault();
+        const texto = document.getElementById("palindromo").value;
+        const resposta = document.querySelector(".resposta");
+        resposta.innerText = reverseString(texto);
+      }
+
+      function reverseString(texto) {
+        let dividindo = texto.split("");
+        let reverso = dividindo.reverse();
+        let palavraReversa = reverso.join("");
+        if (palavraReversa === texto) {
+          return "A palavra informada é um palindromo";
+        } else {
+          return "Não é um palindromo!";
+        }
+      }
+    </script>
+  </body>
+</html>

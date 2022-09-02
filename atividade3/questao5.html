@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questão 5</title>
+    <style>
+      div:first-child {
+        margin-top: 15px;
+      }
+
+      div {
+        margin-top: 10px;
+      }
+
+      .bad {
+        background-color: red;
+        color: white;
+        width: max-content;
+        padding: 5px;
+      }
+
+      .good {
+        background-color: rgb(4, 195, 4);
+        color: black;
+        width: max-content;
+        padding: 5px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      .formulario {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="formulario">
+      <div>
+        <label for="login">Login:</label>
+        <input type="text" name="login" id="login" placeholder="Login" />
+      </div>
+      <div>
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" placeholder="Senha" />
+      </div>
+      <div>
+        <label for="confirma">Confirmação:</label>
+        <input
+          type="password"
+          name="confirma"
+          id="confirma"
+          placeholder="Confirmação de Senha"
+        />
+      </div>
+      <p class="resposta"></p>
+      <button style="margin-top: 0px" type="submit">Submit Form</button>
+    </form>
+
+    <script type="text/javascript">
+      const form = document.querySelector(".formulario");
+
+      function criap() {
+        const p = document.createElement("p");
+        return p;
+      }
+
+      function validar(evento) {
+        evento.preventDefault();
+        const login = document.getElementById("login").value;
+        const senha = document.getElementById("senha").value;
+        const confirma = document.getElementById("confirma").value;
+
+        const tamanho = senha.length;
+        console.log(tamanho);
+
+        if (!login || !senha || !confirma) {
+          resultado("Preencha todos os campos por Gentileza!", false);
+        } else if (senha !== confirma) {
+          resultado("A senha e a confirmação devem ser iguais!", false);
+        } else if (tamanho < 6 || tamanho > 10) {
+          resultado("A senha deve possuir entre 6 e 10 caracteres");
+        } else if (!login.trim() || !senha.trim() || !confirma.trim()) {
+          resultado("Não é permitido o envio com campos em branco !", false);
+        } else {
+          resultado("Dados Enviados com Sucesso!", true);
+        }
+      }
+
+      form.addEventListener("submit", validar);
+
+      function resultado(msg, valido) {
+        const resposta = document.querySelector(".resposta");
+        resposta.innerHTML = " ";
+
+        const p = criap();
+
+        if (valido) {
+          p.classList.add("good");
+        } else {
+          p.classList.add("bad");
+        }
+
+        p.innerHTML = msg;
+        resposta.appendChild(p);
+      }
+    </script>
+  </body>
+</html>

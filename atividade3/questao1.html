@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questão 1</title>
+    <style>
+      .formulario {
+        width: 200px;
+        box-shadow: 0px 0px 1px black;
+        margin: 20px auto;
+      }
+
+      .formulario div {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+      }
+
+      button {
+        padding: 4px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body class="fundo">
+    <form action="" class="formulario">
+      <div>
+        <button
+          onclick="cor('red')"
+          type="button"
+          name="red"
+          style="background-color: red"
+        >
+          Vermelho
+        </button>
+        <button
+          onclick="cor('green')"
+          type="button"
+          style="background-color: green"
+        >
+          Verde
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          onclick="cor('blue')"
+          style="background-color: blue"
+        >
+          Azul
+        </button>
+        <button
+          type="button"
+          onclick="cor('yellow')"
+          style="background-color: yellow"
+        >
+          Amerelo
+        </button>
+      </div>
+    </form>
+
+    <script type="text/javascript">
+      function corFundo(cor) {
+        let fundo = document.querySelector(".fundo");
+        fundo.style.backgroundColor = cor;
+      }
+
+      function cor(nome) {
+        let recebe = nome;
+        if (recebe == "red") {
+          corFundo("red");
+        } else if (recebe == "green") {
+          corFundo("green");
+        } else if (recebe == "yellow") {
+          corFundo("yellow");
+        } else if (recebe == "blue") {
+          corFundo("blue");
+        } else {
+          corFundo("white");
+        }
+      }
+    </script>
+  </body>
+</html>

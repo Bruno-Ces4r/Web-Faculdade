@@ -1,0 +1,78 @@
+.game-title {
+  text-align: center;
+}
+
+.div-width {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.div-justify {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.message {
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px 0px;
+}
+
+.div-number {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.number {
+  align-items: center;
+  width: 60px;
+  padding: 10px;
+}
+
+.div-button {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.play {
+  width: 80px;
+  padding: 10px;
+}
+
+.play:hover,
+.start:hover {
+  cursor: pointer;
+}
+
+.div-new-game {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.start {
+  padding: 10px;
+  color: black;
+}
+
+.bad {
+  width: 100%;
+  border: 1px solid red;
+  background-color: rgb(255, 7, 7);
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.good {
+  width: 100%;
+  border: 1px solid rgb(4, 194, 4);
+  background-color: rgb(4, 194, 4);
+  text-align: center;
+  padding: 10px 0px;
+}

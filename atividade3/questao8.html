@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questão8</title>
+    <style>
+      div {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="nome">Nome:</label>
+        <input type="text" class="nome" />
+      </div>
+      <div>
+        <input
+          type="radio"
+          name="people-type"
+          value="fisica"
+          checked
+        />Fisica<br />
+        <input type="radio" name="people-type" value="juridica" />juridica
+      </div>
+      <div>
+        <label for="cpf">CPF:</label>
+        <input type="text" class="cpf" />
+      </div>
+      <div>
+        <label for="cnpj">CNPJ: </label>
+        <input type="text" class="cnpj" />
+      </div>
+      <div>
+        <label for="nascimento">Nascimento:</label>
+        <input type="date" class="nascimento" />
+      </div>
+      <div>
+        <label for="endereco">Endereço:</label>
+        <input type="text" class="endereco" />
+      </div>
+      <div>
+        <label for="cep">Cep:</label>
+        <input type="number" class="cep" />
+      </div>
+      <div>
+        <label for="telefone">Phone: </label>
+        <input type="tel" class="telefone" />
+      </div>
+      <div>
+        <label for="email">Email: </label>
+        <input type="email" class="email" />
+      </div>
+    </form>
+
+    <script type="text/javascript">
+      const mail = document.querySelector(".email");
+      const cnpj = document.querySelector(".cnpj");
+      const cpf = document.querySelector(".cpf");
+      const peopleType = document.querySelector(
+        'input[name="people-type"]:checked'
+      ).value;
+      if (peopleType === "fisica") {
+        cnpj.disabled = true;
+        cpf.disabled = false;
+      }
+    </script>
+  </body>
+</html>
